@@ -7,7 +7,7 @@ body {
 .oval-image {
     width: 50%; /*This matches the max-width of the img */
     max-width: 700px; /*You can adjust this value as needed */
-    margin: 50px auto 20px;
+    margin: 25px auto 10px;
     position: relative;
     padding-top: 28%; 
     overflow: hidden;
@@ -26,12 +26,14 @@ h1 {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
     font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 h2 {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 h3 {
     font-family: 'Rubik', sans-serif;
@@ -48,10 +50,9 @@ h3 {
     border-radius: 20px;
     padding: 5px;
     margin: 10px auto;
-    margin-right: 20px;
-    max-width: 30%;
+    width: 30%;
+    max-width: 900px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
     text-align: center;
 }
 .option-row {
@@ -127,7 +128,8 @@ h3 {
     border-color: #4B0082;
 }
 .submit-row {
-    margin: 20px 30px;
+    margin: 15px 30px;
+    margin-bottom: 10px;
 }
 #get-clinics {
     width: 100%;
@@ -137,11 +139,25 @@ h3 {
     border: none;
     border-radius: 5px;
     font-family: 'Rubik', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 #get-clinics:hover {
     background-color: #3a006b;
+}
+.result-box {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0e6ff;
+    border: 2px solid #4B0082;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    color: #4B0082;
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }

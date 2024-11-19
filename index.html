@@ -56,5 +56,16 @@
         </div>
     </div>
 </div>
+<div id="result" class="result-box"></div>
+<script>
+document.getElementById('get-clinics').addEventListener('click', function() {
+    const date = document.getElementById('when').value;
+    const time = document.getElementById('time').options[document.getElementById('time').selectedIndex].text;
+    const location = document.getElementById('where').value;
+    const formattedDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const resultText = `The clinic(s) available on ${formattedDate} at ${time} near ${location} are:`;
+    document.getElementById('result').textContent = resultText;
+});
+</script>
 </body>
 </html>
