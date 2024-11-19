@@ -37,8 +37,13 @@ h3 {
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .purple-box {
-    flex: 1;
     border: 5px solid #4B0082;
     border-radius: 20px;
     padding: 5px;
@@ -47,6 +52,7 @@ h3 {
     max-width: 30%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
+    text-align: center;
 }
 .option-row {
     display: flex;
@@ -119,4 +125,23 @@ h3 {
 .option-row input[type="text"]:focus {
     outline: none;
     border-color: #4B0082;
+}
+.submit-row {
+    margin: 20px 30px;
+}
+#get-clinics {
+    width: 100%;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#get-clinics:hover {
+    background-color: #3a006b;
 }
