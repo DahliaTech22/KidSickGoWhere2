@@ -1,0 +1,122 @@
+body {
+    background-color: thistle;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.oval-image {
+    width: 50%; /*This matches the max-width of the img */
+    max-width: 700px; /*You can adjust this value as needed */
+    margin: 50px auto 20px;
+    position: relative;
+    padding-top: 28%; 
+    overflow: hidden;
+    border-radius: 50%; /*Makes the image a perfect oval */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /*This creates a soft edge effect*/
+}
+.oval-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*This ensures the image covers the entire oval*/
+}
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+h3 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+.purple-box {
+    flex: 1;
+    border: 5px solid #4B0082;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px auto;
+    margin-right: 20px;
+    max-width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.option-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.option-row h3 {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    margin-right: 5px;
+}
+.option-row input[type="date"] {
+    flex: 2;
+    padding: 5px;
+    border: 2px solid #4B0082;
+    border-radius: 5px;
+    background-color: lavenderblush;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+}
+.option-row input[type="date"]:focus {
+    outline: none;
+    border-color: #4B0082;
+}
+.option-row input[type="date"]::-webkit-calendar-picker-indicator {
+    padding: 5px;
+    cursor: pointer;
+}
+.option-row select {
+    flex: 2;
+    padding: 5px;
+    border: 2px solid #4B0082;
+    border-radius: 5px;
+    background-color: lavenderblush;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    color: black;
+}
+.option-row select:focus {
+    outline: none;
+    border-color: #4B0082;
+}
+.option-row select optgroup {
+    font-weight: bold;
+    font-style: normal;
+    background-color:lavenderblush;
+    color:#4B0082;
+}
+.option-row select option {
+    font-weight: normal;
+    background-color: lavenderblush;
+    color: black;
+}
+.option-row select optgroup option {
+    padding-left: 20px;
+}
+.option-row input[type="text"] {
+    flex: 2;
+    padding: 5px 5px 5px 10px;
+    border: 2px solid #4B0082;
+    border-radius: 5px;
+    background-color: lavenderblush;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+}
+.option-row input[type="text"]:focus {
+    outline: none;
+    border-color: #4B0082;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Sick Go Where?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="oval-image">
+    <img src="images/Image of Sick Child with Doctor.jpg" alt="Sick Child with Doctor">
+</div>
+    <h1>Kid Sick Go Where?</h1>
+    <h2>Let us know when your child needs to see a doctor in Singapore, <br>and we will let you know which clinics are open near you!</h2>
+<div class="container">
+    <div class="purple-box">
+    <div class="option-row">
+        <h3>When?</h3>
+        <input type="date" id="when" name="when" value="2024-11-20" min="2024-01-01" max="2030-12-31">
+    </div>
+    <div class="option-row">
+        <h3>What time?</h3>
+        <select id="time" name="time">
+            <option value="">Select a time</option>
+            <optgroup label="Morning">
+                <option value="8amto9am">8am to 9am</option>
+                <option value="9amto10am">9am to 10am</option>
+                <option value="10amto11am">10am to 11am</option>
+                <option value="11amto12pm">11am to 12pm</option>
+            </optgroup>
+            <optgroup label="Afternoon">
+                <option value="12pmto1pm">12pm to 1pm</option>
+                <option value="1pmto2pm">1pm to 2pm</option>
+                <option value="2pmto3pm">2pm to 3pm</option>
+                <option value="3pmto4pm">3pm to 4pm</option>
+                <option value="4pmto5pm">4pm to 5pm</option>
+                <option value="5pmto6pm">5pm to 6pm</option>
+            </optgroup>
+            <optgroup label="Evening">
+                <option value="6pmto7pm">6pm to 7pm</option>
+                <option value="7pmto8pm">7pm to 8pm</option>
+                <option value="8pmto9pm">8pm to 9pm</option>
+            </optgroup>
+            <optgroup label="Night">
+                <option value="9pmto8am">9pm to 8am</option>
+            </optgroup>
+        </select>
+    </div>
+    <div class="option-row new-line">
+        <h3>Where?</h3>
+        <input type="text" id="where" name="where" placeholder="Enter postal code">
+    </div>
+</div>
+</body>
+</html>
