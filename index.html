@@ -56,16 +56,32 @@
         </div>
     </div>
 </div>
-<div id="result" class="result-box"></div>
+<div id="result" class="result-box" style="display: none;"></div>
 <script>
-document.getElementById('get-clinics').addEventListener('click', function() {
-    const date = document.getElementById('when').value;
-    const time = document.getElementById('time').options[document.getElementById('time').selectedIndex].text;
-    const location = document.getElementById('where').value;
-    const formattedDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    const resultText = `The clinic(s) available on ${formattedDate} at ${time} near ${location} are:`;
-    document.getElementById('result').textContent = resultText;
-});
+    document.getElementById('get-clinics').addEventListener('click', function() {
+        const date = document.getElementById('when').value;
+        const time = document.getElementById('time').options[document.getElementById('time').selectedIndex].text;
+        const location = document.getElementById('where').value;
+        const formattedDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        
+        const resultText = `The clinic(s) available on <span class="user-input">${formattedDate}</span> at <span class="user-input">${time}</span> near <span class="user-input">${location}</span> are:`;
+        
+        const resultBox = document.getElementById('result');
+        resultBox.innerHTML = resultText;
+        resultBox.style.display = 'block'; // Make the result box visible
+    });
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const options = { day: '2-digit', month: 'short', year: 'numeric', weekday: 'short' };
+        return date.toLocaleDateString('en-GB', options)
+            .replace(/,/g, '') // Remove commas
+            .replace(/(\d+) (\w+) (\d+) (\w+)/, '$1 $2 $3 ($4)'); // Reorder and add parentheses
+    }
+    document.getElementById('result').innerHTML = `
+    Based on your input, a child born on 
+    <span class="user-input formatted-date">${formatDate(birthDate)}</span> 
+    who is experiencing ${symptom} should visit a ${clinicType}.
+    `;
 </script>
 </body>
 </html>
